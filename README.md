@@ -9,7 +9,8 @@ Use the original c++ to implement a serialization (support basic types, composit
 自定义类型的实现的方式主要方式有两点：
   1）：借助C中的宏定义的方式，以及c++11中提出的Variable Tamplate的方式，实现类的属性注册。
   2）：使用访问者模式，将所有需要序列化的类都继承自一个母类（Object），从这个母类身上继承下来的序列化和反序列的方法。
-  
+how to use:
+把serizlize.h 和 Datastream.h 两个文件引入项目中，需要序列化的类继承自Object即可。
 最后：
 这个项目的大体框架已经搭好，只不过一些数据据类型还未包含（思路基本一致）
 需要注意存在不同pc大小端的问题，需要额外处理大小端读取的问题。
